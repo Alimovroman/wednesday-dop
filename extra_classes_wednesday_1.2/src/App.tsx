@@ -11,10 +11,12 @@ import {SetTimeoutType} from 'types';
 const DELAY = 500;
 
 export const App = () => {
+
   const dispatch = useDispatch();
 
   const users = useSelector(selectUsers);
   const usersCount = useSelector(selectUsersCount);
+  console.log(users)
 
   const [isAddNewUser, setIsAddNewUser] = useState<boolean>(false);
 
@@ -40,7 +42,8 @@ export const App = () => {
 
   return (
     <Fragment>
-      <UsersCountValue usersCount={usersCount} />
+
+      <UsersCountValue usersCount={+usersCount} />
 
       <CustomButton
         title="Click Me"

@@ -12,7 +12,7 @@ export const usersCountReducer = (state: InitStateType = initState, action: Acti
     case 'PLUS_USER_COUNT':
       return {
         ...state,
-        count: state.count + 1,
+        count: '' + (+state.count + 1),
       };
     default:
       return state;
